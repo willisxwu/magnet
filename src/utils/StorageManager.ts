@@ -19,15 +19,12 @@ class StorageManager<StorageTyping extends Record<string, unknown>> {
     if (sourceData === null) {
       return null
     }
-    try {
-      const data: unknown = JSON.parse(sourceData)
-      if (this._typeChecker[key](data)) {
-        return data
-      }
-    } finally {
-      // when JSON parse to remove local storage value
-      this.remove(key)
+
+    const data: unknown = JSON.parse(sourceData)
+    if (this._typeChecker[key](data)) {
+      return data
     }
+
     return null
   }
 
@@ -54,3 +51,10 @@ export const localStorageManager = new StorageManager<{
 }>(localStorage, {
   locale: isLocale,
 })
+
+// TODO: For SSO Login setting info
+const isString = (data: unknown): data is string => typeof data === 'string';
+
+export const loginStorageManager = new StorageManager<{
+  loginMethod: string
+}>(localStorage, { loginMethod: isString, })
