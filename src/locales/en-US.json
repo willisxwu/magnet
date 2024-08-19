@@ -1,11 +1,22 @@
 {
   "general": {
-    "welcome": "Welcome to React"
+    "welcome": "Welcome to Magnet",
+    "complete": "Complete"
   },
   "language": {
     "en-us": "English",
     "ja-jp": "Japanese",
     "zh-tw": "Traditional Chinese (TW)",
     "zh-hk": "Traditional Chinese (HK)"
+  },
+  "login": {
+    "facebook": "Sign in with Facebook",
+    "google": "Sign in with Google",
+    "line": "Sign in with LINE",
+    "apple": "Sign in with Apple",
+    "guest": "Continue as Guest"
+  },
+  "ledger": {
+    "myFirstLedger": "My First Ledger"
   }
 }
