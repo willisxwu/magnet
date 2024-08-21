@@ -10,14 +10,14 @@ function App(): JSX.Element {
   useEffect(() => {
     const savedLoginMethod = loginStorageManager.get('loginMethod')
 
-    if (savedLoginMethod != null) {
+    if (savedLoginMethod != null && savedLoginMethod != '') {
       setIsLoggedIn(true)
     }
   }, [])
 
   return (
     <>
-      <div className='mx-auto max-w-192'>
+      <div className='mx-auto h-100vh max-w-192 bg-white'>
         {isLoggedIn ? <CreateLedgerPage /> : <SignInPage />}
       </div>
     </>

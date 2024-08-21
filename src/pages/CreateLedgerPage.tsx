@@ -29,28 +29,26 @@ const CreateLedgerPage = (): JSX.Element => {
   }
 
   return (
-    <div className='mx-auto py-10 flex flex-center flex-col gap-5 '>
-      <div className='p-5 w-40% flex justify-between items-center flex-col aspect-ratio-3/4 rounded-2 bg-[#2E84C7] text-white'>
-        <h2>{name || t('ledger.myFirstLedger')}</h2>
-        <p className='text-bold'>{currency}</p>
+    <div className='h-100vh flex flex-center flex-col'>
+      <div className='p-5 w-70% flex flex-col aspect-ratio-3/4 rounded-2 bg-blue'>
+        <textarea
+          placeholder={t('ledger.myFirstLedger')}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className='w-full h-full text-(8 white) bg-transparent placeholder-(white) break-words'
+        />
+        <select
+          value={currency}
+          onChange={(e) => setCurrency(e.target.value)}
+          className='ml-auto mr-0 py-2 text-(5 white) bg-transparent'
+        >
+          {currencyOptions}
+        </select>
       </div>
-      <input
-        type='text'
-        placeholder={t('ledger.myFirstLedger')}
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        className='px-4 py-2 rounded'
-      />
-      <select
-        value={currency}
-        onChange={(e) => setCurrency(e.target.value)}
-        className='px-4 py-2 rounded'
-      >
-        {currencyOptions}
-      </select>
+
       <button
         onClick={handleCreateLedger}
-        className='px-10 py-3.5 rounded-10 text-bold'
+        className='mt-10 px-10 py-3.5 rounded-10 text-bold bg-amber'
       >
         {t('general.complete')}
       </button>

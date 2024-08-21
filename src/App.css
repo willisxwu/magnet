@@ -1,8 +1,8 @@
 :root {
   width: 100%;
   height: 100%;
-  color: #2c2c2e;
-  background: #fff8e8;
+  color: #1b1c1e;
+  background: #f6f7fb;
   font-family: Inter;
   -webkit-tap-highlight-color: transparent;
 }
@@ -34,8 +34,14 @@ h3 {
 }
 
 input,
+textarea,
 select {
+  padding: unset;
   border: unset;
   outline: none;
   box-shadow: none;
+}
+
+textarea {
+  resize: none;
 }
