@@ -1,4 +1,3 @@
-import './App.css'
 import { loginStorageManager } from './utils/StorageManager'
 import SignInPage from './pages/SignInPage'
 import CreateLedgerPage from './pages/CreateLedgerPage'
