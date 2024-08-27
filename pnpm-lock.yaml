@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@unocss/reset':
+        specifier: ^0.62.2
+        version: 0.62.2
       i18next:
         specifier: ^23.12.2
         version: 23.12.2
@@ -665,6 +668,9 @@ packages:
 
   '@unocss/reset@0.61.8':
     resolution: {integrity: sha512-tG2FhdT3OXDM+tLZj9vXKlloHYxeXVxLR5TKpNjD/WQr4p6/xUFKGHvNfLHpiz4EsXLugEn0prqTxASB4c5gNg==}
+
+  '@unocss/reset@0.62.2':
+    resolution: {integrity: sha512-5hgxcBMMbw5tMSSd4kUX70H0pZK9SwRHtm8Q4VvDV6xOZJa2/fvFR4qyxbuAM9nhOwYUqAAX23lxfmY0bXX73A==}
 
   '@unocss/rule-utils@0.61.8':
     resolution: {integrity: sha512-Sz4JTTOoXX32Dq+T3U761RIHsf+VCnrw/mKSqbn6XUruxivFBr80YC22dKxawzRjBHGdUAIGDRv38ZKgui+4KA==}
@@ -2184,6 +2190,8 @@ snapshots:
       '@unocss/rule-utils': 0.61.8
 
   '@unocss/reset@0.61.8': {}
+
+  '@unocss/reset@0.62.2': {}
 
   '@unocss/rule-utils@0.61.8':
     dependencies:
