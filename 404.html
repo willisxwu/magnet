@@ -1,22 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Page Not Found</title>
   </head>
   <body>
     <script type="text/javascript">
-      // 如果當前不是根的路徑，重導向到 index.html，並附加原始路徑作為查詢參數
-      var target = location.pathname
-      if (!location.pathname.startsWith('/magnet/')) {
-        history.replaceState(null, '', '/magnet/')
-      } else {
-        // 重導向到 index.html 並保留原始路徑
-        location.replace(
-          '/magnet/index.html?redirect=' + encodeURIComponent(target)
-        )
-      }
+      // 重定向所有路徑到 index.html
+      var pathname = window.location.pathname
+      var newUrl = window.location.origin + '/magnet' + '/index.html'
+      window.location.replace(newUrl)
     </script>
   </body>
 </html>
