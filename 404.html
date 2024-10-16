@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Page Not Found</title>
-    <script type="text/javascript">
-      // Redirect to index.html but keep the current pathname
-      window.location.replace(
-        window.location.origin + window.location.pathname + 'index.html'
-      )
+    <script>
+      // 這段代碼將重定向用戶回到主頁面
+      window.location.href = window.location.origin + '/magnet/'
     </script>
   </head>
   <body>
-    <h1>Page Not Found</h1>
-    <p>Redirecting to home...</p>
+    <h1>404 Not Found</h1>
+    <p>Redirecting...</p>
   </body>
 </html>
