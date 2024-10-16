@@ -13,7 +13,7 @@
         history.replaceState(null, '', '/magnet/')
       } else {
         // 重導向到 index.html 並保留原始路徑
-        location.replace('/magnet' + encodeURIComponent(target))
+        location.replace(target)
       }
     </script>
   </body>
