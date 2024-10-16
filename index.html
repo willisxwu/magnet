@@ -10,5 +10,15 @@
   </head>
   <body>
     <div id="root"></div>
+    <script type="text/javascript">
+      // 檢查 URL 查詢參數以獲取重定向的路徑
+      const params = new URLSearchParams(window.location.search)
+      const redirectPath = params.get('redirect')
+
+      // 如果有重定向的路徑，則導航到該路徑
+      if (redirectPath) {
+        window.location.replace(redirectPath)
+      }
+    </script>
   </body>
 </html>
