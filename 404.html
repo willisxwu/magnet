@@ -7,12 +7,9 @@
   </head>
   <body>
     <script type="text/javascript">
-      // 獲取當前路徑
       var target = location.pathname
 
-      // 檢查當前路徑是否有效
       if (!target.startsWith('/magnet/')) {
-        // 將用戶重導向到主頁
         location.replace('/magnet/')
       } else {
         // 將用戶重導向到 index.html 並附加原始路徑
