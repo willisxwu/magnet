@@ -7,13 +7,12 @@
   </head>
   <body>
     <script type="text/javascript">
+      // 如果當前不是根的路徑，重導向到 index.html，並附加原始路徑作為查詢參數
       var target = location.pathname
-
-      // 如果當前路徑不是以 /magnet/ 開頭，則重導向到 /magnet/
-      if (!target.startsWith('/magnet/')) {
-        location.replace('/magnet/')
+      if (!location.pathname.startsWith('/magnet/')) {
+        history.replaceState(null, '', '/magnet/')
       } else {
-        // 重導向到 index.html 並附加原始路徑
+        // 重導向到 index.html 並保留原始路徑
         location.replace(
           '/magnet/index.html?redirect=' + encodeURIComponent(target)
         )
